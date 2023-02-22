@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log In</title>
+    </head>
+    <Body>
+        <form> <!-- Are Inline Tags So we should enclose it in Divs so that the user name and password in different boxes-->
+            <div>
+                <label for = "user"> Username</label> <br> <!-- For the labelling it should have id-->
+                
+                <!-- <input type ="range" id = "user" required min ="10" max = "50" step = "10">  -->
+                <input type ="email" id = "user" required placeholder="abc@gmail.com" name="Username"> 
+            </div>
+            <div>
+                <label for ="Country">Country</label> <br>
+                <input type = "text" id = "Country" name="Country" value="India" disabled>
+            </div>
+            <div>
+                <label for = "Pass"> Password</label> <br>
+                <input type = "password" id = "Pass" required name="Password"> <!--Required will be used for compulsory fieds-->
+            </div>
+            <div>
+                <input type = "Submit">
+            </div>
+        </form>
+    </Body>
+</html>
+
+<!-- Diffrent types are text,password,submit,number,time,url-->
+<!-- range input type along with min max step-->
+<!--placeholder for preexample-->
+<!--Name is important for every input value you have Attribute is very important as it specifies the form where to store the data-->
+<!-- for default value we can use value Attribute for default values -->
+<!-- If you want to diable some fields that are already filled in-->
