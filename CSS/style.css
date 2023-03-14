@@ -1,21 +1,49 @@
 /* Making the css file for external CSS */
+
+/* The Font Family is repeated in paragraph and h1 so we can group them */
 p{
     color:blue;
+    /* font-family: sans-serif; */
     font-size: 20px;
 }
 h1{
     font-size: 40px;
+    /* font-family: sans-serif; */
 }
+
+/* Grouping the selectors */
+h1, p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
 
 /* h4{
     text-transform: uppercase;
 }  For All h4 heading*/
 
 /* For Particular segment of webpage we need to create class of CSS */
-.uppercase{
+/* .uppercase{
     text-transform: uppercase;
 }
 
 .cursive{
     font-family: cursive;
+} */
+
+/* Now If we want all H4 headings within a list to become uppercase as well ass cursive we can use nesting */
+/* added Hover which changes it properties when we move our mouse over it */
+li h4:hover{
+    color: aqua;
+    font-family: cursive;
+    text-transform: uppercase;
+}
+
+/* Accessing an element with its id */
+#Normal{
+    color:blueviolet;
+}
+
+#Swagat h1{
+    color:red;
 }
