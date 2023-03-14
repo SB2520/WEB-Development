@@ -6,3 +6,16 @@ p{
 h1{
     font-size: 40px;
 }
+
+/* h4{
+    text-transform: uppercase;
+}  For All h4 heading*/
+
+/* For Particular segment of webpage we need to create class of CSS */
+.uppercase{
+    text-transform: uppercase;
+}
+
+.cursive{
+    font-family: cursive;
+}
