@@ -1,0 +1,15 @@
+#Swagat{
+    height: 100px;
+    width: 200px;
+    background-color: blanchedalmond;
+}
+
+/* Adding Colurs:- */
+/* We can define the colour in possible ways like directy by name or by their hexcodes(some value followed by #) */
+/* apart from hexadecimal codes we can also specify the RGB values like rgb(12,22,43) its means what % of red green blue you want */
+/* Another alternative of rgb is rgba(12,22,33,10) we need another value called Alpha is called the opacity how opaque you want and Alpha value will between 0 to 1 */
+/* Another way to specify the colour is hsl values hsl stands for HUE(is the angle which you are pointing to in the colour wheel) Saturation(Also Varies from 1 to 100) And Lightness(varies from 1 to 100) similarly hsla() with alpha*/
+
+/* Different CSS units */
+/* Units Can be categorised into 2 categories Absolute(pixel,inch and cm) and Relative */
+/* 1px(CSS) = 1/96 of inch (1CSS pixel may or may not equal 1 device screen pixel but)*/

@@ -1,0 +1,34 @@
+#Swagat{
+    display: flex;
+    height: auto;
+    width: 75vw;
+    background-color: aqua;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+#Swagat div{
+    height: 200px;
+    width: 200px;
+}
+
+#div1{
+    background-color: blue;
+}
+
+#div2{
+    background-color: red;
+}
+
+#div3{
+    order: -1;
+    background-color: purple;
+}
+
+#div4{
+    background-color: palegreen;
+}
+
+#div5{
+    background-color: peachpuff;
+}
