@@ -1,3 +1,12 @@
+@keyframes changeShape{
+    from{
+        border-radius: 0%;
+    }
+    to{
+        border-radius: 50%;
+    }
+}
+
 div{
     height: 100px;
     width: 100px;
@@ -5,11 +14,15 @@ div{
     top:20%;
     background-color: green;
     /* transform: rotate(100deg); */
-    transform: translate(100px,100px);
-    transition: 1s ease-in-out 0.5s;
+    /* transform: translate(100px,100px);
+    transition: 1s ease-in-out;
+    transition: 1s steps(10,end); */
+    animation: changeShape 1s ease-in-out infinite alternate;
 }
 
-div:hover{
+/* div:hover{
     transform: scale(2) translate(200px);
-}
+} */
+
+
 
