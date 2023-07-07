@@ -27,3 +27,21 @@ z.push(2);
 console.log(z);
 z.pop();
 console.log(z);
+
+var c = [20,30,40];
+console.log(c.length);
+console.log(c);
+c.prop1 = "Demo";
+console.log(c.length);
+console.log(c);
+c[10] = 1;
+console.log(c.length);
+
+//Iterationg over arrays
+for(var i in c){ //Itereting over values
+    console.log(c[i]);
+}
+
+for(var i in c){ //Itereting over keys
+    console.log(i);
+}
