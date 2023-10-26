@@ -12,4 +12,4 @@ console.log(process.argv);
 //2nd one is where the file is located path
 
 let a = process.argv.slice(2);
-console.log(sum(parseInt(a[0]),parseInt(a[1])));
+console.log(sum(parseInt(a[0]),parseInt(a[1]))); 
