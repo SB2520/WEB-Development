@@ -6,15 +6,22 @@
         </title>
     </head>
     <body>
+        <h1>Contacts</h1>
+        <ol>
+            <% for(let i of locals.contacts){ %>
+                <li>
+                    Name :&nbsp;
+                    <%= i.name %> <br>
+                    Phone:&nbsp;
+                    <%= i.phone %><br>
+                </li>
+            <% } %>
+        </ol>
         <h1>Forms</h1>
         <form action="/contacts" method="post">
-            <% let n = true %>
-            <% while(n){ %>
             <input name="name" placeholder="Enter Name" type="text" required>
-            <input name="phone" placeholder="Enter Phone Number" type="text" required>
-            <% n = false %>
+            <input name="phone" placeholder="Enter Phone Number" type="number" required>
             <br><button id="Submit" type="submit">Add Contacts</button><br>
-            <% } %>
         </form>
     </body>
 </html>

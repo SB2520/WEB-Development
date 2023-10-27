@@ -4,16 +4,39 @@ let port = process.env.port || 3000;
 
 let app = express();
 
+let contacts = [
+    {
+        "name":"Swagat",
+        "phone":999121212
+    },
+    {
+        "name":"Aryan",
+        "phone":999121212
+    },
+    {
+        "name":"Papa",
+        "phone":999121212
+    },
+    {
+        "name":"Mummy",
+        "phone":999121212
+    }
+];
+
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded());
 
 app.get('/',(req,res)=>{
-    return res.render('home',{"title":"Swagat"});
+    return res.render('home',{"title":"Swagat","contacts":contacts});
 });
 
 app.post('/contacts',(req,res)=>{
     console.log(req.body);
+    contacts.push({
+        "name":req.body.name,
+        "phone":req.body.phone
+    });
     return res.redirect('/');
 })
 
