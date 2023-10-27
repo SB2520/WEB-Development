@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        <%= locals.title %>
+    </title>
+    <body>
+        <h1>This is my home page</h1>
+        <p>Click the button below for the contact list:</p>
+        <button id="contact">Contact List</button>
+        <script type="text/javascript">
+            let a = document.getElementById('contact');
+            a.addEventListener('click',()=>{
+                window.location.href = "contact"
+            });
+        </script>
+    </body>
+</html>
