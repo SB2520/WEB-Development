@@ -25,6 +25,7 @@ let contacts = [
 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
+//Creating the parser
 app.use(express.urlencoded());
 
 app.get('/',(req,res)=>{
