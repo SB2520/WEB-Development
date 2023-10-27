@@ -33,11 +33,8 @@ app.get('/',(req,res)=>{
 
 app.post('/contacts',(req,res)=>{
     console.log(req.body);
-    contacts.push({
-        "name":req.body.name,
-        "phone":req.body.phone
-    });
-    return res.redirect('/');
+    contacts.push(req.body);
+    return res.redirect('back');
 })
 
 app.listen(port,(err)=>{
