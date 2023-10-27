@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+    </head>
+    <body>
+        <h1>Forms</h1>
+        <form action="/contacts" method="post">
+            <% let n = true %>
+            <% while(n){ %>
+            <input name="name" placeholder="Enter Name" type="text" required>
+            <input name="phone" placeholder="Enter Phone Number" type="text" required>
+            <% n = false %>
+            <br><button id="Submit" type="submit">Add Contacts</button><br>
+            <% } %>
+        </form>
+    </body>
+</html>
