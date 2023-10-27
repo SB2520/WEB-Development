@@ -8,7 +8,11 @@ app.set('views',path.join(__dirname,'depend'));
 
 app.get('/',(req,res)=>{
     return res.render('home',{title:"My Name is Swagat"});
-})
+});
+
+app.get('/swagat',(req,res)=>{
+    return res.render('practice',{title:"Swagat"});
+});
 
 app.listen(port,(err)=>{
     if(err){
