@@ -15,6 +15,16 @@ let arr = [
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded());
+app.use((req,res,next)=>{
+    req.swagat = 1;
+    console.log("Middleware1");
+    next();
+});
+
+app.use((req,res,next)=>{
+    console.log("Middleware2 ",req.swagat);
+    next();
+});
 
 app.get('/',(req,res)=>{
    return res.render('home',{
