@@ -38,7 +38,13 @@ app.get('/',(req,res)=>{
    }); 
 });
 
+function removeExtraSpaceInBetween(str){
+    return str.replace(/\s+/g,' ');
+}
+
 app.post('/add',(req,res)=>{
+    req.body.name.trim();
+    req.body.name = removeExtraSpaceInBetween(req.body.name);
     arr.push(req.body);
     return res.redirect('/');
 });

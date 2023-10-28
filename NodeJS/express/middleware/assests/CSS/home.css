@@ -11,8 +11,27 @@ body {
   flex-direction: column;
 }
 
-.Contact {
-  background-color: aqua;
+#uList li{
+    background-color: aqua;
+    margin: 2px;
+}
+
+#uList li:hover{
+    background-color: gray;
+}
+
+.Contact{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  width: 50vh;
+  font-size: large;
+  padding: 2vh;
+}
+
+.Contact:hover{
+  background-color: gray;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,7 +43,6 @@ body {
 
 .Trash{
     display: block;
-    background-color: aqua;
     padding: 0vh 2vh 2vh 2vh;
     margin-bottom: 2px;
     width: 50vh;

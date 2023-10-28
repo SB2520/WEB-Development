@@ -8,7 +8,7 @@ let boolvalid1 = false;
 let boolvalid2 = false;
 
 function hasNumbers(a){
-    return /[^a-zA-Z]/g.test(a);
+    return /[^a-zA-Z\s]/g.test(a);
 }
 
 formName.addEventListener('input',()=>{
