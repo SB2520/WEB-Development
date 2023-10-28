@@ -22,8 +22,13 @@ formName.addEventListener('input',()=>{
     }
 });
 
+function isNumber(str){
+    return /[^0-9]/g.test(str);
+}
+
 formPhone.addEventListener('input',()=>{
-    if(!regexName.test(formPhone.value) && formPhone.value.trim() !== ""){
+    if(formPhone.value.trim() !== "" && isNumber(formPhone.value))formPhone.value = "";
+    else if(!regexName.test(formPhone.value) && formPhone.value.trim() !== ""){
         validPhone.style.visibility = "visible"; 
         boolvalid2 = false;
     }

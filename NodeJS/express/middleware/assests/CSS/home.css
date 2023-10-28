@@ -13,7 +13,9 @@ body {
 
 #uList li{
     background-color: aqua;
+    width: 50vh;
     margin: 2px;
+    display: flex;
 }
 
 #uList li:hover{
@@ -25,27 +27,15 @@ body {
   flex-direction: row;
   justify-content: space-between;
   color: white;
-  width: 50vh;
-  font-size: large;
-  padding: 2vh;
-}
-
-.Contact:hover{
-  background-color: gray;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: white;
-  width: 50vh;
+  width: 80%;
   font-size: large;
   padding: 2vh;
 }
 
 .Trash{
-    display: block;
-    padding: 0vh 2vh 2vh 2vh;
-    margin-bottom: 2px;
-    width: 50vh;
+    padding: 2vh;
+    width: 10%;
+    justify-content: center;
 }
 
 .width-form{
@@ -54,6 +44,7 @@ body {
 
 #button{
     border: solid black;
+    background-color: white;
 }
 
 .valid-phone{

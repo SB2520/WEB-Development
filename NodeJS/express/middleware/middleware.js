@@ -49,8 +49,10 @@ app.post('/add',(req,res)=>{
     return res.redirect('/');
 });
 
-app.get('/delete/:id',(req,res)=>{
-    
+app.get('/delete',(req,res)=>{
+    let index = arr.findIndex(()=>req.params.phone == arr.phone);
+    if(index != -1)arr.splice(index,1);
+    res.redirect('/');
 });
 
 //Listening

@@ -11,7 +11,9 @@
       <% for(let i of locals.arr){ %>
       <li>
         <div class="Contact"><div><%= i.name %></div><div><%= i.phone %></div></div>
-        <i class="fa-solid fa-trash-can Trash"></i>
+        <a class="Trash" href="/delete/?phone=<% i.phone %>">
+            <i class="fa-solid fa-trash-can"></i>
+        </a>
       </li>
       <% } %>
     </ol>
