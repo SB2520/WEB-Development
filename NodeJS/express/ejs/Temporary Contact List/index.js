@@ -10,7 +10,7 @@ app.set("views", path.join(__dirname, "views"));
 
 //accesing the static files
 app.use(express.urlencoded());
-app.use(express.static('assests'));
+app.use(express.static("assests"));
 
 let arr = [
   {
@@ -20,7 +20,7 @@ let arr = [
   {
     name: "Aryan",
     phone: 882313132,
-  }
+  },
 ];
 
 app.get("/", (req, res) => {
@@ -30,16 +30,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
-
   return res.render("contact", {
     title: "Contacts",
     contactlist: arr,
   });
 });
 
-app.post('/swagat',(req,res)=>{
-    arr.push(req.body);
-    return res.redirect('/')
+app.post("/swagat", (req, res) => {
+  arr.push(req.body);
+  return res.redirect("/");
 });
 
 app.listen(port, (err) => {

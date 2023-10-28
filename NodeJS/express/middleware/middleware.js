@@ -5,16 +5,21 @@ let app = express();
 
 let arr = [
     {
-        "name":"Swagat"
+        "name":"Swagat",
+        "phone":883232034
     },
     {
-        "name":"Aryan"
+        "name":"Aryan",
+        "phone":93292855
     }
 ];
 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded());
+app.use(express.static('assests'));
+
+//Some of the midlleware
 app.use((req,res,next)=>{
     req.swagat = 1;
     console.log("Middleware1");
@@ -36,6 +41,10 @@ app.get('/',(req,res)=>{
 app.post('/add',(req,res)=>{
     arr.push(req.body);
     return res.redirect('/');
+});
+
+app.get('/delete/:id',(req,res)=>{
+    
 });
 
 //Listening
