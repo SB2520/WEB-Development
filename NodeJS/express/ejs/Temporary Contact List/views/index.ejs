@@ -6,7 +6,12 @@
     <body>
         <h1>This is my home page</h1>
         <p>Click the button below for the contact list:</p>
-        <button id="contact">Contact List</button>
+        <button id="contact">Contact List</button><br><br>
+        <form action="/swagat" method="post">
+            <input placeholder="Enter Name" name="name" type="text" required>
+            <input placeholder="Enter Phone Number" name="phone" type="number" required><br><br>
+            <button type="submit">Submit</button>
+        </form>
         <script type="text/javascript">
             let a = document.getElementById('contact');
             a.addEventListener('click',()=>{

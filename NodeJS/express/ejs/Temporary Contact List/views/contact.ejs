@@ -1,21 +1,17 @@
 <html>
-    <title>
-        <%= locals.title %>
-    </title>
-    <body>
-        <ol>
-            <% for(let i of locals.contactlist){ %>
-            <li>
-                <p>
-                    Name of the person is: 
-                    <%= i.Name %>
-                </p>
-                <p>
-                    Phone Number is : 
-                    <%= i.PhoneNo %>
-                </p>
-            </li>
-            <% } %>
-        </ol>
-    </body>
+  <head>
+    <title><%= locals.title %></title>
+    <link rel="stylesheet" type="text/css" href="/CSS/home.css">
+  </head>
+  <body>
+    <ol>
+      <% for(let i of locals.contactlist){ %>
+      <li>
+        <p>Name of the person is: <%= i.name %></p>
+        <p>Phone Number is : <%= i.phone %></p>
+      </li>
+      <% } %>
+    </ol>
+    <script type="text/javascript" src="/JS/home.js"></script>
+  </body>
 </html>
