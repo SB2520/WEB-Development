@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+    </head>
+    <body>
+        <ol>
+            <% for(let i of locals.arr){ %>
+            <li>
+                <%= i.name %>
+            </li>
+            <% } %>
+        </ol>
+        <H1>Forms</H1>
+        <form action="/add" method="post">
+            <input id="name" name="name" placeholder="Enter Your Name" >
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
