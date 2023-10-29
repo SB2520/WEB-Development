@@ -4,16 +4,7 @@ const db = require('./config/mongoose');
 const port = process.env.port || 3000;
 let app = express();
 
-let arr = [
-    {
-        "name":"Swagat",
-        "phone":883232034
-    },
-    {
-        "name":"Aryan",
-        "phone":93292855
-    }
-];
+const Contact = require('./models/contact');
 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
