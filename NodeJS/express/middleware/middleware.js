@@ -10,17 +10,6 @@ app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded());
 app.use(express.static('assests'));
 
-let arr = [
-    {
-        "name" : "Swagat",
-        "phone" : 93432434
-    },
-    {
-        "name" : "Aryan",
-        "phone" : 93432434
-    }
-];
-
 //Some of the midlleware
 app.use((req,res,next)=>{
     req.swagat = 1;
@@ -65,8 +54,14 @@ app.post('/add',(req,res)=>{
 });
 
 app.get('/delete',(req,res)=>{
-    let index = arr.findIndex(()=>req.params.phone == arr.phone);
-    if(index != -1)arr.splice(index,1);
+    async function deleteusers(){
+        try{
+            await Contact.findOneAndDelete(req.params.id);
+        }catch(error){
+            console.log(error.name);
+        }
+    };
+    deleteusers();
     res.redirect('/');
 });
 
