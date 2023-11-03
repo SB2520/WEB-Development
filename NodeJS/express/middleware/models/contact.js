@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//Giving the Schema to DB
 const contactSchema = mongoose.Schema(
     {
       name: {
@@ -13,6 +14,8 @@ const contactSchema = mongoose.Schema(
     }
 );
 
+//Creating A model of the Databse.
 const Contact = mongoose.model('Contact',contactSchema);
 
+//Exporting the module
 module.exports = Contact;

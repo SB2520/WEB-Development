@@ -1,13 +1,23 @@
 const express = require('express');
+//Importing the path
 const path = require('path');
+
+//Connection of the database
 const db = require('./config/mongoose.js');
 const port = process.env.port || 3000;
 let app = express();
+
+//Providing Schema with model
 const Contact = require('./models/contact.js');
 
+
+//Setting view engine and directory for views
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
+//Middleware for accessing the urls
 app.use(express.urlencoded());
+
+//Middleware for including css/js files
 app.use(express.static('assests'));
 
 //Some of the midlleware
@@ -22,11 +32,12 @@ app.use((req,res,next)=>{
     next();
 });
 
+
+//Receiving the get request
 app.get('/',(req,res)=>{
     async function retrieveUsers(){
         try {
           const users = await Contact.find().lean(); // Add .lean() to convert to JSON
-          console.log(users);
           return res.render('home',{
             "title":"Practice",
             "arr": users
